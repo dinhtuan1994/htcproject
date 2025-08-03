@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Lỗi Biến Tần</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .example {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+        max-width: 100%;  /* Thay 600px bằng 100% để lấp đầy màn hình nhỏ */
+        margin: 0 auto;
+        padding: 15px;  /* Giảm padding trên mobile */
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 1.5rem;  /* Giảm kích thước tiêu đề trên mobile */
+    }
+
+    select, input {
+        width: 100%;
+        padding: 12px;  /* Tăng padding để dễ tap */
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;  /* Nút full-width trên mobile */
+        padding: 12px;
+    }
+
+    /* Desktop: Áp dụng khi màn hình >= 768px */
+    @media (min-width: 768px) {
+        body {
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        button {
+            width: auto;  /* Nút co lại theo nội dung */
+        }
+    }
+    </style>
+</head>
+<body>
+    <p>Nhập thông tin để tìm kiếm mã lỗi</p>
+    <form>
+        <div class="form-group">
+            <label for="inverter-brand">Hãng biến tần</label>
+            <select id="inverter-brand" name="inverter-brand">
+                <option value="">-- Chọn hãng biến tần --</option>
+                <!-- Additional options would be added here dynamically or manually -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="error-code">Mã lỗi</label>
+            <input type="text" id="error-code" name="error-code" placeholder="Nhập mã lỗi...">
+            <p class="example">Ví dụ: EO01, Alarm 101, Fault 25...</p>
+            <p class="example">Nhập mã lỗi hiển thị trên màn hình biến tần</p>
+        </div>
+        
+        <button type="submit">Tìm kiếm</button>
+    </form>
+</body>
+</html>
